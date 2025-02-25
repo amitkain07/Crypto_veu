@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import Table from "./Components/Hero";
 import Trending from "./Components/Trending";
 import Footer from "./Components/Footer";
+import MarketChart from "./Components/Market";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -20,13 +21,15 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"} min-h-screen transition-all`}>
+    <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"} min-h-screen transition-all flex flex-col gap-4`}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Table />
       <Trending />
+      <MarketChart/>
       <Footer />
     </div>
   );
 };
+
 
 export default App;

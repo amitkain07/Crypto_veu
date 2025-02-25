@@ -17,7 +17,7 @@ function Trending() {
 
   return (
     <div>
-      <h1 className="pl-8 py-6 font-bold text-2xl">🔥 Trending Coins</h1>
+      <h1 className="pl-8 py-6 font-bold text-2xl ">🔥 Trending Coins</h1>
 
       <div className="flex  items-center justify-around gap-4">
         {data.map((coin) => (
@@ -29,14 +29,14 @@ function Trending() {
             <div className="flex items-center gap-4">
               <img src={coin.image} alt={coin.name} className="h-12 w-12" />
               <div>
-                <h2 className="text-lg font-semibold">{coin.name}</h2>
+                <h2 className="text-xs md:text-lg font-semibold">{coin.name}</h2>
                 <p className="text-gray-300">${coin.current_price.toLocaleString()}</p>
               </div>
             </div>
 
             {/* Right Side - Percentage Change */}
             <p
-              className={`text-lg font-bold ${
+              className={` text-xs md:text-lg font-bold ${
                 coin.price_change_percentage_24h >= 0 ? "text-green-500" : "text-red-500"
               }`}
             >

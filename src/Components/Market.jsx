@@ -88,7 +88,7 @@ const MarketChart = () => {
               stroke="#545151"
               strokeWidth={0.3}
             />
-            <Tooltip />
+            <Tooltip content={<CustomTooltip/>}/>
             <Area
               type="monotone"
               dataKey="market_cap"

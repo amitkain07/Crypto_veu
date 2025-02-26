@@ -23,7 +23,7 @@ const Table = () => {
     <div className=" transition-all px-6">
       <h1 className="px-4 py-6 font-bold text-2xl   ">Market Overview</h1>
       <table className="w-full text-left rounded-xl overflow-hidden">
-        <thead className="bg-gray-200 dark:bg-gray-800 text-black dark:text-white">
+        <thead className=" dark:bg-gray-800 dark:text-white">
           <tr>
             {headers.map((header, index) => (
               <th key={index} className="px-6 py-3 border-b border-gray-400 dark:border-gray-600">
